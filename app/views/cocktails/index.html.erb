@@ -1,0 +1,16 @@
+<div class="mister-cocktail">
+<p class="h1">Mister cocktail <small class="h4 text-muted">Le Roi du cocktail</small></p>
+</div>
+
+<div class="mc-container">
+<ul class="list-group">
+  <% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail_path(cocktail) do %>
+    <li class="list-group-item"><%= cocktail.name %></li>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to new_cocktail_path do %>
+  <p class="m-2"><%= icon 'fas', 'pen' %> Ajouter un cocktail</p>
+<% end %>
+</div>

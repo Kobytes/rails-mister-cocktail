@@ -1,0 +1,9 @@
+<div class="m-3">
+<h1><%= @cocktail.name %></h1>
+</div>
+
+<div class="m-4">
+  <%= link_to new_cocktail_dose_path(@cocktail) do %>
+    <p><%= icon 'fas', 'pen' %> Editer ce cocktail</p>
+  <% end %>
+</div>
